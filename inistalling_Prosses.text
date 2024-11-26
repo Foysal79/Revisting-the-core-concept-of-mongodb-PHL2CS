@@ -1,0 +1,41 @@
+1 . initialing the project
+        npm init 
+
+2 . express installing
+      npm install express --save
+
+3 . typescript installing ( devDependencies )
+       npm install typescript --save-dev
+
+4 .  install mongoose 
+       npm install mongoose --save
+
+5 . cors installing
+        npm i cors
+        npm i @types/cors
+
+6 . dotenv installing
+         npm i dotenv
+
+7 . ts config or tsconfig.json file create 
+        tsc -init 
+        change this config -> 
+                              "rootDir": "./src", 
+                              "outDir": "./dist",  
+
+8 . converting ts to js create file dist ->
+      tsc      
+
+9 . installing always watching server and code ts to js -> 
+         npm i -D ts-node-dev
+        - run this -> 
+         ts-node-dev --respawn --transpile-only ./src/server.ts
+          
+          make this scripts : "start:dev" : "ts-node-dev --respawn --transpile-only ./src/server.ts"
+              { alter native for 
+               installing nodemon -> ( devDependencies )
+               npm i -D nodemon
+               tsc -w }
+
+10 . 
+            
