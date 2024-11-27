@@ -1,15 +1,13 @@
 import mongoose from "mongoose";
 import app from "./app";
-const port = 5000
+import config from "./config";
+
 async function main() {
     try{
-        
-        await mongoose.connect('mongodb+srv://movieCollection:movieCollection@cluster0.haioro2.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0');
-
-        app.listen(port, () => {
-        console.log(`Example app listening on port ${port}`)
+        await mongoose.connect(config.db_url as string);
+        app.listen(config.port , () => {
+        console.log(`Example app listening on port ${config.port}`)
       })
-
     } 
     catch(error){
      console.log(error);

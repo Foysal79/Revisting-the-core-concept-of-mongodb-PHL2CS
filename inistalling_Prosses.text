@@ -32,10 +32,13 @@
          ts-node-dev --respawn --transpile-only ./src/server.ts
           
           make this scripts : "start:dev" : "ts-node-dev --respawn --transpile-only ./src/server.ts"
+              
               { alter native for 
                installing nodemon -> ( devDependencies )
                npm i -D nodemon
                tsc -w }
 
-10 . 
+10 . eslink setup follow this link -> 
+     https://typescript-eslint.io/getting-started
+     
             
