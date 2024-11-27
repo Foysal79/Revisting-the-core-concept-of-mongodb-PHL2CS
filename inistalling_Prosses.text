@@ -38,7 +38,17 @@
                npm i -D nodemon
                tsc -w }
 
-10 . eslink setup follow this link -> 
+10 . eslint setup follow this link -> 
      https://typescript-eslint.io/getting-started
-     
-            
+
+      eslint command -> npx eslint src ( only for src folder)
+                        npx eslint . (all over folder)
+       make scripts   -> "lint" : "npx eslint .",
+                         "lint:fix": "npx eslint . --fix",
+
+11 . env file url dbms file na set  -> 
+        mongodb+srv://movieCollection:movieCollection@cluster0.haioro2.mongodb.net/<dbms collection name>?retryWrites=true&w=majority&appName=Cluster0    
+
+
+12 . interface -> schema + model -> route -> controller -> service 
+
