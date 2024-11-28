@@ -43,9 +43,7 @@ const getAllMovies = async ( req : Request, res : Response) => {
 
 const getSingleMovie = async (req : Request , res : Response) => {
   try{
-      const {Id} = req.params
-     
-      console.log(`Fetching movie with ID: ${Id}`);
+      const {Id} = req.params;
       const result = await MovieServices.getSingleMovieFromDB(Id);
       res.status(200).json({
         success : true,
@@ -62,11 +60,31 @@ const getSingleMovie = async (req : Request , res : Response) => {
   }
 }
 
+const getMovieBySlug = async ( req : Request, res : Response) => {
+  try {
+    const {slug} = req.params
+    
+    const result = await MovieServices.getMovieBySlugFromDB(slug);
+    res.status(200).json({
+      success : true,
+      message : "Movie fetched successfully",
+      data : result
+    })
+  }
+  catch(error){
+     res.status(500).json({
+      success : false,
+      message : 'do not get movie by slug for Database ',
+      data : error
+     })
+  }
+}
 
 
 
 export const movieController = {
     createMovie,
     getAllMovies,
-    getSingleMovie
+    getSingleMovie,
+    getMovieBySlug
 }

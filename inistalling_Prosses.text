@@ -52,3 +52,8 @@
 
 12 . interface -> schema + model -> route -> controller -> service 
 
+13 . slug create time use date forming ->
+        npm i date-fns 
+
+14 .  create slug -> 
+        npm i slugify
