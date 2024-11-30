@@ -1,11 +1,13 @@
 import { Request, Response } from "express";
+import { ReviewServices } from "./review.service";
 
 
 
 const addReview = async (req : Request , res: Response) => {
     try {
+        const {slug} = req.params
         const reviewData = req.body;
-        const result = await ReviewServices.createMovieFromDB(reviewData)
+        const result = await ReviewServices.addReviewForDB(slug, reviewData)
         res.json({
           success : true,
           message : "Review created successfully",

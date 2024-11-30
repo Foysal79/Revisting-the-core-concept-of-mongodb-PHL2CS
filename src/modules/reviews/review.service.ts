@@ -3,7 +3,7 @@ import { TReview } from "./review.interface"
 import { Review } from "./review.model";
 
 
-const addReviewForDB = async (slug : string, reviewData : Partial<TReview>) : promise<TReview> => {
+const addReviewForDB = async (slug : string, reviewData : Partial<TReview>) : Promise<TReview> => {
    const movie = await Movie.findOne({slug })
    if(!movie) {
     throw new Error('Movie not found');
