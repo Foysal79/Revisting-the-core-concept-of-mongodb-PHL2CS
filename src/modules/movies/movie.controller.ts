@@ -1,6 +1,6 @@
 import { Request, Response } from "express";
 import { MovieServices } from "./movie.service";
-import mongoose from "mongoose";
+
 
 
 

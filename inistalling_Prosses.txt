@@ -57,3 +57,22 @@
 
 14 .  create slug -> 
         npm i slugify
+
+
+
+
+
+
+
+
+  just ignore this 
+
+  ---------------------
+
+  viewCount : number ;
+  totalRating : number;
+  avgRating : number; [virtually]
+
+  Review 
+   movie : movieId;
+        
