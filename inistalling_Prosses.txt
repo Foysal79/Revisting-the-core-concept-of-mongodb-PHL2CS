@@ -68,11 +68,10 @@
   just ignore this 
 
   ---------------------
-
-  viewCount : number ;
-  totalRating : number;
-  avgRating : number; [virtually]
-
-  Review 
-   movie : movieId;
-        
+  /api/movies/:slug 
+  /api/movies/:slug/reviews [Get all Reviews of A a specific]
+  /api/movies/:slug/reviews/:id [Get single Reviews of A Specific Movie]
+  /api/movies/:slug/reviews/:id [Delete Single Review of a Specific Movie]
+  /api/movies/:slug/reviews/:id [Put single Reviews of a Specific Movie]
+  - sort on the basing avgRating
+  - rating filtering       

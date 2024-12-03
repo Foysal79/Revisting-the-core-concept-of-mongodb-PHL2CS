@@ -5,7 +5,7 @@ import { ReviewServices } from "./review.service";
 
 const addReview = async (req : Request , res: Response) => {
     try {
-        const {slug} = req.params
+        const {slug} = req.params;
         const reviewData = req.body;
         const result = await ReviewServices.addReviewForDB(slug, reviewData)
         res.json({
