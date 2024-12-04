@@ -3,6 +3,21 @@ import { ReviewServices } from "./review.service";
 
 
 
+
+
+// const addReview2 = catchAsync(
+//   async (req: Request, res: Response) => { 
+//     const {slug} = req.params;
+//     const reviewData = req.body;
+//     const result = await ReviewServices.addReviewForDB(slug, reviewData)
+//     res.json({
+//       success : true,
+//       message : "Review created successfully",
+//       data : result,
+//     })
+//   }
+// )
+
 const addReview = async (req : Request , res: Response) => {
     try {
         const {slug} = req.params;
