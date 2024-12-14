@@ -1,4 +1,4 @@
-import { Request, Response } from "express";
+import { NextFunction, Request, Response } from "express";
 import { MovieServices } from "./movie.service";
 
 
@@ -24,20 +24,21 @@ const createMovie = async (req : Request , res: Response) => {
 }
 
 
-const getAllMovies = async ( req : Request, res : Response) => {
+const getAllMovies = async ( req : Request, res : Response, next: NextFunction) => {
   try {
-        const result = await MovieServices.getAllMoviesFromDB();
+        const result1 = await MovieServices.getAllMoviesFromDB();
         res.status(200).json({
           success : true,
           message : "Movies fetched successfully",
           data : result
         })
   } catch(error) {
-     res.status(500).json({
-       success : false,
-       message : 'do not get all movies for Database ',
-       data : error
-     })
+    //  res.status(500).json({
+    //    success : false,
+    //    message : 'do not get all movies for Database ',
+    //    data : error
+    //  })
+    next(error);
   }
 }
 

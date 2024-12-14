@@ -1,10 +1,6 @@
 import { Request, Response } from "express";
 import { ReviewServices } from "./review.service";
 
-
-
-
-
 // const addReview2 = catchAsync(
 //   async (req: Request, res: Response) => { 
 //     const {slug} = req.params;
